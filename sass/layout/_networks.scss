@@ -1,0 +1,34 @@
+.networks__list {
+    @include centeredFlex ();
+}
+.networks__item + .networks__item {
+    margin-left: 10px;
+}
+.networks__link {
+    @include centeredFlex ();
+
+    margin: 0;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white-text-color);
+
+    @include transitionAll (background-color,color);
+    
+&:hover,
+&:focus {
+    background-color: var(--accent-color);
+}
+}
+.team-networks__link {
+    color: #afb1b8;
+&:hover,
+&:focus {
+    color: var(--white-text-color);
+}
+}
+.team-networks__icon {
+    fill: currentColor;
+}

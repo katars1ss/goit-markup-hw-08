@@ -1,0 +1,36 @@
+.clients__title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+.clients__list {
+    @include centeredFlex ();
+}
+.clients__item + .clients__item {
+    margin-left: var(--card-set-gap);
+}
+.clients__link {
+    @include centeredFlex ();
+
+    width: 170px;
+    height: 92px;
+
+    color: rgba(175, 177, 184, 1);
+
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+
+    @include transitionAll (border-color,color);
+&:hover,
+&:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+}
+.clients__icon {
+    fill: currentColor;
+}
